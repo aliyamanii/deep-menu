@@ -580,10 +580,6 @@ video {
   display: flex;
 }
 
-.table{
-  display: table;
-}
-
 .h-5{
   height: 1.25rem;
 }
@@ -715,7 +711,7 @@ h6 {
 }
 
 .banner-parallax {
-  background-image: url("../public/img/bg1.jpg");
+  background-image: url("header.jpg");
   min-height: 100vh;
 }
 
@@ -1159,8 +1155,8 @@ h6 {
 }
 
 @media (min-width: 640px){
-  .sm\:hidden{
-    display: none;
+  .sm\:block{
+    display: block;
   }
 }
 

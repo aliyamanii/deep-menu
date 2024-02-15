@@ -44,7 +44,7 @@ h6 {
 }
 
 .banner-parallax {
-  background-image: url("../public/img/bg1.jpg");
+  background-image: url("header.jpg");
   min-height: 100vh;
 }
 
