@@ -37,3 +37,15 @@ function openMenu(evt, menuName) {
   evt.currentTarget.firstElementChild.className += " w3-red";
 }
 document.getElementById("myLink").click();
+
+function onLoadPage() {
+  // Open the "Starter" menu by default
+  openMenu(event, "Starter");
+
+  // Adjust the styling for the categories to be in a line
+  const menuLinks = document.getElementById("menu").getElementsByTagName("a");
+  for (let i = 0; i < menuLinks.length; i++) {
+    menuLinks[i].style.width = "25%"; // Set width to 25% for each category
+    menuLinks[i].style.float = "left"; // Float left to create a line
+  }
+}
