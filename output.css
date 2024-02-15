@@ -568,6 +568,10 @@ video {
   top: 90%;
 }
 
+.mb-16{
+  margin-bottom: 4rem;
+}
+
 .mb-20{
   margin-bottom: 5rem;
 }
@@ -684,9 +688,19 @@ video {
   font-family: Vazirmatn;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-8xl{
+  font-size: 6rem;
+  line-height: 1;
 }
 
 .text-white{
