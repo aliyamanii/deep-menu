@@ -1,0 +1,11 @@
+{
+  "name": "deep-menu",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build-css": "tailwindcss build input.css -i input.css -o  output.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

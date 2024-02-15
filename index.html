@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deep</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Amatic+SC"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Reem+Kufi+Fun:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <header class="navbar-container">
+      <nav class="w-[92%] h-full flex justify-between items-center">
+        <div>
+          <h1 class="navbar-title">
+            <a href="/" class="text-3xl">دیپ</a>
+          </h1>
+        </div>
+        <div
+          class="nav-links w-full md:w-auto md:h-full py-5 md:py-0 md:static absolute bg-coal left-0 top-[-9000%] duration-300"
+        >
+          <ul
+            class="flex w-full md:w-auto md:h-full md:flex-row flex-col md:items-center md:gap-0 justify-end items-start"
+            id="menu"
+          >
+            <li class="navbar-option">
+              <a href="#" class="navbar-anchor">
+                <span>تماس</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 ml-2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-option">
+              <a href="#" class="navbar-anchor">
+                <span>درباره</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 ml-2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-option">
+              <a href="#" class="navbar-anchor">
+                <span>منو</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-5 h-5 ml-2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="navbar-option">
+              <a href="#" class="navbar-anchor">
+                <span>پیشخوان</span>
+                <svg
+                  class="w-5 ml-2"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6">
+          <div class="flex gap-2 justify-center md:justify-end">
+            <a href="#" class="red-btn">ورود</a>
+            <a href="#" class="red-btn">ثبت نام</a>
+          </div>
+          <div
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer md:hidden"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Header with image -->
+    <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+      <div class="w3-display-bottomleft w3-padding">
+        <span class="w3-tag w3-xlarge">ساعات کاری:</span>
+      </div>
+      <div class="w3-display-middle w3-center">
+        <span class="text-white sm:hidden md:block" style="font-size: 100px"
+          >دیپ</span
+        >
+        <span
+          class="w3-text-white w3-hide-large w3-hide-medium"
+          style="font-size: 60px"
+          ><b>دیپ</b></span
+        >
+        <p>
+          <a href="#menu" class="w3-button w3-xxlarge w3-black">مشاهده منو</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- Menu Container -->
+    <div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">منو</h1>
+        <div class="w3-row w3-center w3-border w3-border-dark-grey">
+          <a
+            href="javascript:void(0)"
+            onclick="openMenu(event, 'Steak');"
+            id="myLink"
+          >
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              استیک
+            </div>
+          </a>
+          <a
+            href="javascript:void(0)"
+            onclick="openMenu(event, 'Burger');"
+            id="myLink"
+          >
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              برگر
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Pizza');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              پیتزا
+            </div>
+          </a>
+          <a href="javascript:void(0)" onclick="openMenu(event, 'Starter');">
+            <div class="w3-col s4 tablink w3-padding-large w3-hover-red">
+              پیش غذا
+            </div>
+          </a>
+        </div>
+
+        <div id="Pizza" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>پپرونی</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">200</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>مخصوص</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">300</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>مرغ</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">100</span>
+          </h1>
+          <p class="w3-text-grey">محنویات</p>
+          <hr />
+
+          <h1>
+            <b>مخلوط</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">200</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>سیر و استیک</b> <span class="w3-tag w3-red w3-round">داغ!</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">350</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>هات لاورز</b> <span class="w3-tag w3-grey w3-round">جدید</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">500</span>
+          </h1>
+          <p class="w3-text-grey">گوشت و مرغ و کالباس</p>
+        </div>
+
+        <div id="Steak" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>گوشت</b> <span class="w3-tag w3-grey w3-round">تازه</span>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">250</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>گوشت خوب</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">550</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>گوشت قوی</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">400</span>
+          </h1>
+          <p class="w3-text-grey">گوشت</p>
+          <hr />
+
+          <h1>
+            <b>گوشت گوساله</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">300</span>
+          </h1>
+          <p class="w3-text-grey">غذا</p>
+        </div>
+
+        <div id="Starter" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>سوپ</b>
+            <span class="w3-tag w3-grey w3-round">فصلی</span
+            ><span class="w3-right w3-tag w3-dark-grey w3-round">150</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+          <hr />
+
+          <h1>
+            <b>نان سیر</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">95</span>
+          </h1>
+          <p class="w3-text-grey">نان با سیر</p>
+          <hr />
+
+          <h1>
+            <b>سوپ جو</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">69</span>
+          </h1>
+          <p class="w3-text-grey">سوپ و جو</p>
+          <hr />
+
+          <h1>
+            <b>سیب زمینی</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">80</span>
+          </h1>
+          <p class="w3-text-grey">محتویات</p>
+        </div>
+
+        <div id="Burger" class="w3-container menu w3-padding-32 w3-white">
+          <h1>
+            <b>همبرگر</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">140</span>
+          </h1>
+          <p class="w3-text-grey">گوشت گاو</p>
+          <hr />
+
+          <h1>
+            <b>چیزبرگر</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">160</span>
+          </h1>
+          <p class="w3-text-grey">همبرگر با ورقه پنیر</p>
+          <hr />
+
+          <h1>
+            <b>قارچ برگر</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">200</span>
+          </h1>
+          <p class="w3-text-grey">چیزبرگر با ورقه قارچ</p>
+          <hr />
+
+          <h1>
+            <b>چیکن برگر</b>
+            <span class="w3-right w3-tag w3-dark-grey w3-round">100</span>
+          </h1>
+          <p class="w3-text-grey">گوشت مرغ سوخاری</p>
+        </div>
+
+        <br />
+      </div>
+    </div>
+
+    <!-- About Container -->
+    <div
+      class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge"
+      id="about"
+    >
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">درباره</h1>
+        <p>
+          دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ
+          دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ
+          دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ دیپ
+        </p>
+
+        <h1><b>ساعات کاری</b></h1>
+
+        <div class="w3-row">
+          <div class="w3-col s6">
+            <p>Mon & Tue CLOSED</p>
+            <p>Wednesday 10.00 - 24.00</p>
+            <p>Thursday 10:00 - 24:00</p>
+          </div>
+          <div class="w3-col s6">
+            <p>Friday 10:00 - 12:00</p>
+            <p>Saturday 10:00 - 23:00</p>
+            <p>Sunday Closed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image of location/map -->
+    <img
+      src="/w3images/map.jpg"
+      class="w3-image w3-greyscale"
+      style="width: 100%"
+      id="myMap"
+    />
+
+    <!-- Contact -->
+    <div
+      class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge"
+    >
+      <div class="w3-content">
+        <h1 class="w3-center w3-jumbo" style="margin-bottom: 64px">Contact</h1>
+        <p>
+          Find us at some address at some place or call us at 05050515-122330
+        </p>
+        <p>
+          <span class="w3-tag">FYI!</span> We offer full-service catering for
+          any event, large or small. We understand your needs and we will cater
+          the food to satisfy the biggerst criteria of them all, both look and
+          taste.
+        </p>
+        <p class="w3-xxlarge">
+          <strong>Reserve</strong> a table, ask for today's special or just send
+          us a message:
+        </p>
+        <form action="/action_page.php" target="_blank">
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="text"
+              placeholder="Name"
+              required
+              name="Name"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="number"
+              placeholder="How many people"
+              required
+              name="People"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="datetime-local"
+              placeholder="Date and time"
+              required
+              name="date"
+              value="2020-11-16T20:00"
+            />
+          </p>
+          <p>
+            <input
+              class="w3-input w3-padding-16 w3-border"
+              type="text"
+              placeholder="Message \ Special requirements"
+              required
+              name="Message"
+            />
+          </p>
+          <p>
+            <button class="w3-button w3-light-grey w3-block" type="submit">
+              SEND MESSAGE
+            </button>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-black w3-padding-48 w3-xxlarge"></footer>
+    <script src="index.js"></script>
+  </body>
+</html>
