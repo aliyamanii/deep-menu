@@ -11,24 +11,17 @@ html {
   height: 100%;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+body {
   font-family: "Reem Kufi Fun", sans-serif;
 }
 
 .menu {
   display: none;
+  font-family: "Vazirmatn";
 }
-.bgimg {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/header.jpg");
-  min-height: 90%;
+
+.tablink {
+  @apply mb-3 border-gray-500 border-[1px];
 }
 
 .parallax-container {
@@ -103,38 +96,6 @@ h6 {
 
 .section-title {
   @apply font-bold flex justify-end pb-2 mt-12 border-b border-gray-200 text-cream;
-}
-
-.card {
-  @apply relative rounded-2xl flex flex-col bg-white border-gray-200 shadow-2xl overflow-hidden  hover:cursor-pointer hover:scale-105 transition-all;
-}
-
-.card:hover::before {
-  @apply content-[''] absolute inset-0 bg-cream bg-opacity-80 group-hover:bg-opacity-75;
-}
-
-.card-img {
-  @apply h-32 w-full object-cover sm:h-48;
-}
-
-.card-title {
-  @apply font-bold;
-}
-
-.card-paragraph {
-  @apply h-[40%] leading-7 absolute inset-0 p-4 opacity-0 hover:opacity-100 transition-all text-right line-clamp-3 overflow-hidden;
-}
-
-.card-btn {
-  @apply red-btn absolute top-28 right-4 opacity-0 transition-all;
-}
-
-.card:hover .card-paragraph {
-  opacity: 1;
-}
-
-.card:hover .card-btn {
-  opacity: 1;
 }
 
 .btn {
