@@ -6,6 +6,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Reem+Kufi+Fun:wght@400..700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
@@ -552,6 +554,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container{
+  width: 100%;
+}
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
+
 .absolute{
   position: absolute;
 }
@@ -570,6 +606,10 @@ video {
 
 .mb-16{
   margin-bottom: 4rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
 }
 
 .mb-20{
@@ -656,6 +696,10 @@ video {
   gap: 0.5rem;
 }
 
+.gap-20{
+  gap: 5rem;
+}
+
 .gap-4{
   gap: 1rem;
 }
@@ -664,9 +708,22 @@ video {
   gap: 1.5rem;
 }
 
+.rounded-3xl{
+  border-radius: 1.5rem;
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-coal{
   --tw-bg-opacity: 1;
   background-color: rgb(30 30 36 / var(--tw-bg-opacity));
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .px-6{
@@ -682,6 +739,14 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.font-hearts{
+  font-family: Reem Kufi Fun;
 }
 
 .font-vazirmatn{
@@ -703,6 +768,20 @@ video {
   line-height: 1;
 }
 
+.font-bold{
+  font-weight: 700;
+}
+
+.text-\[\#333\]{
+  --tw-text-opacity: 1;
+  color: rgb(51 51 51 / var(--tw-text-opacity));
+}
+
+.text-maroon{
+  --tw-text-opacity: 1;
+  color: rgb(150 3 26 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -718,13 +797,8 @@ video {
   transition-duration: 300ms;
 }
 
-body,
-html {
-  height: 100%;
-}
-
 body {
-  font-family: "Reem Kufi Fun", sans-serif;
+  height: 100%;
 }
 
 .menu {
@@ -994,84 +1068,175 @@ body {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-/* Modal Styles */
-
-.modal{
-  position: fixed;
-  inset: 0px;
-  z-index: 50;
-  display: none;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-  --tw-bg-opacity: 0.5;
-}
-
-.modal-content{
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  box-sizing: border-box;
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  max-width: 42rem;
-  border-radius: 1.5rem;
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 226 183 / var(--tw-bg-opacity));
-}
-
-@media (min-width: 768px){
-  .modal-content{
-    width: 40%;
-  }
-}
-
-.modal-img{
-  margin-bottom: 1rem;
-  height: auto;
+.cd__main {
+  min-height: 100vh;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940) !important;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
-.modal-text{
+.cd__main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
   width: 100%;
-  padding: 1.5rem;
-  text-align: right;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal-title{
-  margin-bottom: 0.75rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.close-container{
-  text-align: right;
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.close{
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  flwx-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  color: maroon;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  font-family: vazirmatn;
+}
+
+.contact-info-content p {
+  font-size: 1em;
+}
+
+.contact-form {
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+  width: 100%;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
   cursor: pointer;
-  padding: 1rem;
-  text-align: right;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  --tw-text-opacity: 1;
-  color: rgb(0 48 73 / var(--tw-text-opacity));
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #00bcd4;
+  transition: 0.5s;
 }
 
-.close:hover,
-.close:focus{
-  --tw-text-opacity: 1;
-  color: rgb(214 40 40 / var(--tw-text-opacity));
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.contact-form .input-box input[type="submit"]:hover {
+  background: #fff;
+  color: #00bcd4;
+}
+
+@media (max-width: 991px) {
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
 }
 
 .hover\:bg-red-500:hover{
@@ -1079,7 +1244,25 @@ body {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-red-800:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+
+.hover\:font-black:hover{
+  font-weight: 900;
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px){
+  .sm\:mb-20{
+    margin-bottom: 5rem;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -1088,6 +1271,10 @@ body {
 @media (min-width: 768px){
   .md\:static{
     position: static;
+  }
+
+  .md\:mb-20{
+    margin-bottom: 5rem;
   }
 
   .md\:block{

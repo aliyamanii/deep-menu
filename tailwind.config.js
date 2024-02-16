@@ -18,6 +18,7 @@ module.exports = {
         logo: ["Lobster"],
         vazirmatn: ["Vazirmatn"],
         nastaliq: ["Noto Nastaliq Urdu"],
+        hearts: ["Reem Kufi Fun"],
       },
     },
   },
